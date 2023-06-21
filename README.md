@@ -99,7 +99,6 @@ French Example
 ```
 
 ## Screenshots
-![](https://github.com/MohamedAbd0/list_country_picker/blob/main/screenshots/demo.gif)
 ![](https://github.com/MohamedAbd0/list_country_picker/blob/main/screenshots/1.png)
 ![](https://github.com/MohamedAbd0/list_country_picker/blob/main/screenshots/2.png)
 ![](https://github.com/MohamedAbd0/list_country_picker/blob/main/screenshots/3.png)

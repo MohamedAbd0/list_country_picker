@@ -46,9 +46,11 @@ class _MyHomePageState extends State<MyHomePage> {
             ListTile(
               title: Text(_country?.name ?? 'إختر الدوله'),
               trailing: ListCountryPiker(
+                initialCountryCode: "20",
                 dialogTitle: 'إختر الدوله',
                 locale: const Locale('ar'),
                 onCountryChanged: (value) {
+                  print(value);
                   setState(() {
                     _country = value;
                   });
@@ -56,6 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: const Icon(Icons.arrow_drop_down),
               ),
             ),
+
 
             //English
             ListTile(
@@ -84,6 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: const Icon(Icons.arrow_drop_down),
               ),
             ),
+            
           ],
         ),
       ),

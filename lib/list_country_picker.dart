@@ -3,20 +3,22 @@
 library list_country_picker;
 
 import 'package:flutter/material.dart';
+import 'package:list_country_picker/helper/extensions/string.dart';
 import 'dialog/country_picker_dialog.dart';
 import 'helper/countries.dart';
 export 'helper/countries.dart';
+export '';
 
 class ListCountryPiker extends StatefulWidget {
   /// The widget below this widget in the tree.
   ///
   final Widget child;
 
-  /// 2 letter ISO Code or country dial code.
+  /// country dial code.
   ///
   /// ```dart
-  /// initialCountryCode: 'EG', // Egypt
-  /// initialCountryCode: '+20', // Egypt code
+  /// initialCountryCode: '20', // Egypt code
+  /// initialCountryCode: 'EG', // Egypt code
   /// ```
   final String? initialCountryCode;
 
@@ -85,16 +87,39 @@ class _ListCountryPikerState extends State<ListCountryPiker> {
     _countryList = unSortcountryList;
     filteredCountries = _countryList;
 
-    if (widget.initialCountryCode != null &&
-        _countryList
-            .map((e) => e.code.toString())
-            .toList()
-            .contains(widget.initialCountryCode)) {
-      Future.delayed(Duration.zero, () {
+
+
+
+    if (widget.initialCountryCode != null ) {
+
+      final initCode = widget.initialCountryCode!.replaceAll('+', '');
+
+      if(initCode.isInt){
+
+
+if(_countryList.map((e) => e.dialCode).toList().contains(initCode)){
+Future.delayed(Duration.zero, () {
         widget.onCountryChanged(_countryList.firstWhere(
-          (element) => element.code == widget.initialCountryCode,
+          (element) => element.dialCode == initCode,
         ));
       });
+        }
+
+
+
+        
+
+      }else{
+
+                if(_countryList.map((e) => e.code).toList().contains(initCode.toUpperCase())){
+Future.delayed(Duration.zero, () {
+        widget.onCountryChanged(_countryList.firstWhere(
+          (element) => element.code == initCode.toUpperCase(),
+        ));
+      });
+        }
+      }
+      
     }
   }
 
@@ -104,7 +129,7 @@ class _ListCountryPikerState extends State<ListCountryPiker> {
 
     return InkWell(
       onTap: _changeCountry,
-      child: widget.child,
+      child: IgnorePointer(child: widget.child),
     );
   }
 

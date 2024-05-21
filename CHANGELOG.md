@@ -2,4 +2,7 @@
 
 * flutter upgrade version.
 
+## 1.0.1
+
+* performance enhancement.
 

@@ -1,13 +1,11 @@
-# list_country_picker
+![image](https://github.com/MohamedAbd0/list_country_picker/blob/main/cover.png?raw=true)
 
 it is a package for customizable country selection with multi-language support like Arabic, English, and French.
 
 [![Pub Version](https://img.shields.io/pub/v/list_country_picker?logo=flutter&style=for-the-badge)](https://pub.dev/packages/list_country_picker)
 
 -----
-![image](https://github.com/MohamedAbd0/list_country_picker/blob/main/cover.png)
-![image](https://github.com/MohamedAbd0/list_country_picker/blob/main/screenshots/demo.gif)
-
+![image](https://github.com/MohamedAbd0/list_country_picker/blob/main/screenshots/demo.gif?raw=true)
 
 
 Installation
@@ -99,9 +97,9 @@ French Example
 ```
 
 ## Screenshots
-![](https://github.com/MohamedAbd0/list_country_picker/blob/main/screenshots/1.png)
-![](https://github.com/MohamedAbd0/list_country_picker/blob/main/screenshots/2.png)
-![](https://github.com/MohamedAbd0/list_country_picker/blob/main/screenshots/3.png)
+![](https://github.com/MohamedAbd0/list_country_picker/blob/main/screenshots/1.png?raw=true)
+![](https://github.com/MohamedAbd0/list_country_picker/blob/main/screenshots/2.png?raw=true)
+![](https://github.com/MohamedAbd0/list_country_picker/blob/main/screenshots/3.png?raw=true)
 ## Contributions
 
 Contributions of any kind are more than welcome! Feel free to fork and improve list_country_picker in any way you want, make a pull request, or open an issue.

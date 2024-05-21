@@ -1,6 +1,6 @@
 name: list_country_picker
 description: ListCountryPiker is a package for customizable country selection with multi-language support like Arabic, English, and French.
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/MohamedAbd0/list_country_picker
 
 environment:

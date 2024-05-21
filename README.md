@@ -1,6 +1,6 @@
 # list_country_picker
 
-ListCountryPiker is a package for customizable country selection with multi-language support like Arabic, English, and French.
+it is a package for customizable country selection with multi-language support like Arabic, English, and French.
 
 [![Pub Version](https://img.shields.io/pub/v/list_country_picker?logo=flutter&style=for-the-badge)](https://pub.dev/packages/list_country_picker)
 

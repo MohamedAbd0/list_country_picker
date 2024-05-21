@@ -3,11 +3,11 @@
 library list_country_picker;
 
 import 'package:flutter/material.dart';
-import 'package:list_country_picker/helper/extensions/string.dart';
 import 'dialog/country_picker_dialog.dart';
-import 'helper/countries.dart';
-export 'helper/countries.dart';
-export '';
+import 'dialog/export.dart';
+export 'dialog/export.dart';
+import 'helper/export.dart';
+export 'helper/export.dart';
 
 class ListCountryPiker extends StatefulWidget {
   /// The widget below this widget in the tree.
@@ -87,39 +87,29 @@ class _ListCountryPikerState extends State<ListCountryPiker> {
     _countryList = unSortcountryList;
     filteredCountries = _countryList;
 
-
-
-
-    if (widget.initialCountryCode != null ) {
-
+    if (widget.initialCountryCode != null) {
       final initCode = widget.initialCountryCode!.replaceAll('+', '');
 
-      if(initCode.isInt){
-
-
-if(_countryList.map((e) => e.dialCode).toList().contains(initCode)){
-Future.delayed(Duration.zero, () {
-        widget.onCountryChanged(_countryList.firstWhere(
-          (element) => element.dialCode == initCode,
-        ));
-      });
+      if (initCode.isInt) {
+        if (_countryList.map((e) => e.dialCode).toList().contains(initCode)) {
+          Future.delayed(Duration.zero, () {
+            widget.onCountryChanged(_countryList.firstWhere(
+              (element) => element.dialCode == initCode,
+            ));
+          });
         }
-
-
-
-        
-
-      }else{
-
-                if(_countryList.map((e) => e.code).toList().contains(initCode.toUpperCase())){
-Future.delayed(Duration.zero, () {
-        widget.onCountryChanged(_countryList.firstWhere(
-          (element) => element.code == initCode.toUpperCase(),
-        ));
-      });
+      } else {
+        if (_countryList
+            .map((e) => e.code)
+            .toList()
+            .contains(initCode.toUpperCase())) {
+          Future.delayed(Duration.zero, () {
+            widget.onCountryChanged(_countryList.firstWhere(
+              (element) => element.code == initCode.toUpperCase(),
+            ));
+          });
         }
       }
-      
     }
   }
 
